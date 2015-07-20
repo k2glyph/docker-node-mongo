@@ -1,13 +1,15 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-require('./config/database.js');
+var morgan = require('morgan');
 
+require('./config/database.js');
 var Note = require('./models/Note.js');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded());
+app.use(morgan('dev'));
 
 // Create notes
 app.post('/notes', function(req, res, next) {
