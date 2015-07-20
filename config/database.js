@@ -1,5 +1,4 @@
 var mongoose = require('mongoose');
-
 var MONGO_URL = 'mongodb://localhost/';
 var DB_NAME = 'example-app-db';
 
