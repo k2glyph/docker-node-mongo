@@ -11,5 +11,5 @@ RUN mkdir -p /var/www/webapp
 COPY . /var/www/webapp
 WORKDIR /var/www/webapp
 RUN npm install
-
+EXPOSE 3000
 CMD ["node", "/var/www/webapp/app.js"]
