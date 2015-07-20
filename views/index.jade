@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title An example docker app with persistence
+  body
+    h1 Notes
+    each note in notes
+      p= note.text
+    form(action='/notes', method='post')
+      input(type='text', name='text', placeholder='Add a note...')
+      button(type='submit', class='btn') Add Note
